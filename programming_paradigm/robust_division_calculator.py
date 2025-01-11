@@ -1,17 +1,17 @@
+# robust_division_calculator.py
 def safe_divide(numerator, denominator):
-    """Performs division while handling division by zero and non-numeric inputs."""
+    """Perform safe division, handling errors for division by zero and non-numeric inputs."""
     try:
-        # Attempt to convert inputs to floats
+        # Attempt to convert input to floats
         numerator = float(numerator)
         denominator = float(denominator)
-    except ValueError:
-        # Handle case where inputs cannot be converted to floats
-        return "Error: Both numerator and denominator must be numeric values."
-    
-    try:
-        # Perform the division and return the result
+        
+        # Perform division
         result = numerator / denominator
-        return f"Result: {result:.2f}"
+        return f"Result: {result}"
+
     except ZeroDivisionError:
-        # Handle division by zero error
-        return "Error: Division by zero is not allowed."
+        return "Error: Cannot divide by zero."
+    
+    except ValueError:
+        return "Error: Both numerator and denominator must be valid numbers."
