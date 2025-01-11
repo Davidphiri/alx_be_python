@@ -1,4 +1,5 @@
 # bank_account.py
+
 class BankAccount:
     def __init__(self, initial_balance=0):
         """Initialize the account with an initial balance."""
@@ -25,4 +26,5 @@ class BankAccount:
 
     def display_balance(self):
         """Display the current balance in a user-friendly format."""
+        # Corrected output message
         print(f"Current balance: ${self.account_balance:.2f}")
